@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthcare Landing Page</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Inter,sans-serif;
+}
+
+body{
+background:#f6fbfb;
+color:#0f172a;
+}
+
+nav{
+background:white;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #e5e7eb;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+}
+
+.menu{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+.menu a{
+text-decoration:none;
+color:#475569;
+}
+
+.search{
+padding:12px 18px;
+border:1px solid #dce7e8;
+border-radius:30px;
+width:250px;
+}
+
+.cart{
+background:#0b8b8b;
+color:white;
+padding:12px 25px;
+border-radius:30px;
+border:none;
+}
+
+.hero{
+padding:80px 8%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+background:linear-gradient(to right,#eaf7f7,#edf8ff);
+}
+
+.badge{
+display:inline-block;
+padding:10px 18px;
+background:#dff5f5;
+border-radius:30px;
+margin-bottom:20px;
+color:#0b8b8b;
+}
+
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:72px;
+line-height:1;
+margin-bottom:25px;
+}
+
+.hero h1 span{
+color:#0b8b8b;
+}
+
+.hero p{
+font-size:18px;
+line-height:1.7;
+color:#64748b;
+margin-bottom:30px;
+}
+
+.buttons{
+display:flex;
+gap:15px;
+}
+
+.btn{
+padding:14px 28px;
+border-radius:40px;
+border:none;
+cursor:pointer;
+font-size:16px;
+}
+
+.primary{
+background:#0b8b8b;
+color:white;
+}
+
+.secondary{
+background:white;
+border:1px solid #dce7e8;
+}
+
+.hero img{
+width:100%;
+border-radius:30px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.stats{
+display:flex;
+gap:80px;
+padding:40px 8%;
+}
+
+.stat h2{
+font-size:40px;
+font-family:'Playfair Display',serif;
+}
+
+.stat p{
+color:#64748b;
+}
+
+.categories{
+padding:80px 8%;
+}
+
+.categories h2{
+font-family:'Playfair Display',serif;
+font-size:48px;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:25px;
+border:1px solid #e5e7eb;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+
+.icon{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.card h3{
+margin-bottom:10px;
+font-size:30px;
+font-family:'Playfair Display',serif;
+}
+
+.card p{
+color:#64748b;
+}
+
+footer{
+background:white;
+padding:60px 8%;
+margin-top:80px;
+border-top:1px solid #e5e7eb;
+}
+
+footer p{
+color:#64748b;
+}
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:52px;
+}
+
+.stats{
+flex-wrap:wrap;
+gap:30px;
+}
+
+nav{
+flex-direction:column;
+gap:20px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+
+<div class="logo">🩺 Pulxoria</div>
+
+<ul class="menu">
+<li><a href="#">Home</a></li>
+<li><a href="#">Shop</a></li>
+<li><a href="#">Categories</a></li>
+<li><a href="#">Track Order</a></li>
+</ul>
+
+<div>
+<input class="search" placeholder="Search supplies...">
+<button class="cart">Cart 0</button>
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div>
+
+<div class="badge">
+Trusted by 1,200+ clinics
+</div>
+
+<h1>
+Healthcare,<br>
+<span>delivered.</span>
+</h1>
+
+<p>
+Hospital-grade supplies, diagnostics, PPE and
+medical essentials from verified suppliers.
+</p>
+
+<div class="buttons">
+<button class="btn primary">Shop Supplies</button>
+<button class="btn secondary">Browse Categories</button>
+</div>
+
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1200" alt="">
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat">
+<h2>24h</h2>
+<p>Dispatch</p>
+</div>
+
+<div class="stat">
+<h2>500+</h2>
+<p>SKUs</p>
+</div>
+
+<div class="stat">
+<h2>4.9★</h2>
+<p>Rating</p>
+</div>
+
+</section>
+
+<section class="categories">
+
+<h2>Find what you need</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">💧</div>
+<h3>IV Fluids</h3>
+<p>Sterile infusion solutions</p>
+</div>
+
+<div class="card">
+<div class="icon">💉</div>
+<h3>Syringes</h3>
+<p>Single-use sterile products</p>
+</div>
+
+<div class="card">
+<div class="icon">🧤</div>
+<h3>Gloves</h3>
+<p>Nitrile and latex protection</p>
+</div>
+
+<div class="card">
+<div class="icon">😷</div>
+<h3>Masks</h3>
+<p>Respiratory protection</p>
+</div>
+
+<div class="card">
+<div class="icon">🩹</div>
+<h3>Bandages</h3>
+<p>Wound care essentials</p>
+</div>
+
+<div class="card">
+<div class="icon">🩺</div>
+<h3>Diagnostics</h3>
+<p>Clinical monitoring devices</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>🩺 Pulxoria</h2>
+
+<br>
+
+<p>
+Healthcare supplies for clinics, caregivers and homes.
+</p>
+
+</footer>
+
+</body>
+</html>
